@@ -1,0 +1,174 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {  
+  font-family: 'Arial', sans-serif;
+  color: #f0f0f5;
+  background-color: #0a0a1a;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #f0f0f5;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5em;
+}
+
+/* Layout Geral */
+body {
+  background: url('../img/huntrix-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 26, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #e58bd8;
+  font-size: 2em;
+}
+
+/* Navegação / header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(10, 10, 26, 0.9);
+  z-index: 100;
+  padding: 10px 20px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+header nav a {
+  color: #e58bd8;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: #ffd669;
+}
+
+/* Seção do Resumo */
+#resumo {
+  padding-top: 60px;
+}
+#resumo p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+/* Aba dos Personagens */
+.abas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.abas button {
+  background-color: #1f1f3a;
+  color: #f0f0f5;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.abas button.ativo {
+  background-color: #ffd669;
+  color: #0a0a1a;
+}
+
+.aba-conteudo {
+  display: none;
+  text-align: center;
+}
+.aba-conteudo.ativo {
+  display: block;
+}
+.aba-conteudo img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.aba-conteudo .bio {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+/* Seção dos Temas */
+#temas p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+/* Galeria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.galeria img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.galeria img:hover {
+  transform: scale(2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+/* Rodapé */
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  color: #888;
+}
+
+/* Controle da Música */
+#controle-musica {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(31, 31, 58, 0.8);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #f0f0f5;
+  font-size: 20px;
+  z-index: 200;
+}
